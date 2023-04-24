@@ -1,0 +1,32 @@
+{% extends 'Main/base.html' %}
+{% block content %}
+<div class="login-register-area pt-100px pb-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                        <div class="login-register-wrapper">
+                           <h4>Forget Password?</h4>
+                            <div class="tab-content">
+
+                                    <div class="login-form-container">
+                                        <div class="login-register-form">
+                                           <form action="{% url 'f_password' %}" method="POST">
+                                                {% csrf_token %}
+                                                <input type="text" name="username" placeholder="Username" />
+
+                                                <div class="button-box">
+                                                    <button class="btn btn-primary" type="submit"><span>Send request</span></button>
+                                                </div>
+                                                Don't have account?<a href="{% url 'register' %}">Register</a><br>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
