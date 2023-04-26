@@ -1,0 +1,1 @@
+web: gunicorn elshop.wsgi --log-file -
